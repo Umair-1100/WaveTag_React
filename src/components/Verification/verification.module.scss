@@ -1,0 +1,120 @@
+@import "../mixin-var.scss";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.section_of_verification {
+  width: 100%;
+  background-color: $border;
+  height: 100vh;
+  @include display;
+}
+.inner_of_verification {
+  width: 30%;
+  @include display;
+  flex-direction: column;
+  text-align: center;
+}
+.wave_logo_verification_blue {
+  width: 30%;
+  margin-bottom: 1.5rem;
+}
+.check_email_text {
+  color: $black;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+.code_sent {
+  margin-bottom: 0.5rem;
+  color: $textverification;
+}
+.after_code_get {
+  margin-bottom: 0.8rem;
+  color: $textverification;
+}
+.verification_code {
+  margin-bottom: 1rem;
+  color: $textverification;
+}
+.parent_of_input_verification {
+  @include displaygap(1.5rem);
+  margin-bottom: 2rem;
+}
+.inputs_of_verification {
+  width: 10%;
+  text-align: center;
+  border-bottom: 2px solid $inputborder;
+  background-color: transparent;
+  outline: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.verify_email_button {
+  background-color: $lightpurple;
+  width: 90%;
+  padding: 0.5rem 0;
+  border-radius: 30px;
+  margin-bottom: 1rem;
+  color: $white;
+  border: 1px solid transparent;
+  transition: all 0.3s ease-in;
+
+}
+.not_get_code {
+  color: $eightone;
+  margin-bottom: 0.4rem;
+}
+.request_again_button {
+  color: $blue;
+}
+
+@media only screen and (max-width: 1440px) {
+  .inner_of_verification {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .inner_of_verification {
+    width: 90%;
+  }
+  .check_email_text {
+    font-size: 1rem;
+  }
+  .code_sent,
+  .after_code_get,
+  .verification_code,
+  .verify_email_button,
+  .not_get_code,
+  .request_again_button {
+    font-size: 0.9rem;
+  }
+  .parent_of_input_verification {
+    @include displaygap(1rem);
+  }
+}
+@media only screen and (max-width: 375px) {
+  .inner_of_verification {
+    width: 100%;
+  }
+  .check_email_text {
+    font-size: 0.9rem;
+  }
+  .code_sent,
+  .after_code_get,
+  .verification_code,
+  .verify_email_button,
+  .not_get_code,
+  .request_again_button {
+    font-size: 0.8rem;
+  }
+  .parent_of_input_verification {
+    @include displaygap(1rem);
+  }
+}
+

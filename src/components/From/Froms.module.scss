@@ -1,0 +1,175 @@
+@import "../mixin-var.scss";
+
+//<!--------- start toggle button  ------------->
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 30px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  outline: none;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: $toggleBtnbg;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px $toggleBtnbg;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(27px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+//<!--------- End toggle button  ------------->
+.feature_btn_blog {
+  @include displaygap(10px);
+  justify-content: start;
+}
+.from_main_inputs {
+  padding: 1rem 2rem;
+
+  .header_input_main {
+    @include displaygap(0.3rem);
+    flex-direction: column;
+    align-items: start;
+    color: $datecolor;
+    margin: 1rem 0 0 0;
+
+    label {
+      font-size: 1.1rem;
+    }
+    input {
+      width: 45%;
+      padding: 0.7rem 1rem;
+      border: 2px solid $EditBlogborder;
+      border-radius: 15px;
+      outline: none;
+
+      &::placeholder {
+        color: $datecolor;
+      }
+    }
+  }
+  .header_input_Text {
+    @include display;
+    align-items: end;
+    justify-content: space-between;
+    margin: 1rem 0;
+    p {
+      font-size: 1.1rem;
+      color: $datecolor;
+    }
+    button {
+      padding: 0.5rem 3rem;
+      color: $blue;
+      border: 2px solid $blue;
+      border-radius: 10px;
+    }
+  }
+
+  .input_check_main {
+    @include displaygap(2rem);
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .input_check {
+      border: 2px solid $EditBlogborder;
+      width: 48%;
+      padding: 0 1rem;
+      border-radius: 15px;
+      @include display;
+      justify-content: space-between;
+
+      input {
+        width: 100%;
+        outline: none !important;
+        border: none !important;
+        padding: 0.9rem 0.5rem 0.9rem 0rem;
+
+        &:active {
+          outline: none !important;
+          box-shadow: none !important;
+          border: none !important;
+        }
+        &:focus {
+          box-shadow: none !important;
+          outline: none !important;
+          border: none !important;
+        }
+      }
+    }
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.from_disclaimer_main {
+  margin: 1rem 0;
+  h1 {
+    margin: 0.4rem 0;
+    @include displaygap(0.7rem);
+    justify-content: start;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: $datecolor;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+  textarea {
+    padding: 0.7rem 1rem;
+    border-radius: 15px;
+    resize: none;
+    height: 20%;
+    border: 2px solid $EditBlogborder;
+    width: 100%;
+  }
+}
+.From_main_update_btn {
+  @include display;
+  justify-content: end;
+  button {
+    padding: 0.5rem 3rem;
+    color: $white;
+    border: 2px solid $blue;
+    background-color: $blue;
+    border-radius: 10px;
+  }
+}

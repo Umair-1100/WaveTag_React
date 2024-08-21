@@ -1,0 +1,56 @@
+@import '../mixin-var.scss';
+
+
+.support_page_full_main{
+    @include display;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    width: 100%;
+    .main_page_support{
+        flex-direction: column;
+        align-items: start;
+        width: 50%;
+
+        input{
+            width: 100%;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            padding: 0.6rem 1rem;
+            margin: 0.2rem 0;
+            border: 2px solid $EditBlogborder;
+
+        }
+        h3{
+            font-size: 1.3rem;
+            color: $datecolor;
+        }
+        p{
+            color: $datecolor;
+            font-weight: 300;
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+        h1{
+            color: $accessoriesText;
+
+        }
+        h2{
+            color: $accessoriesText;
+            margin-top: 1rem;
+        }
+        textarea{
+            margin: 0.2rem 0;
+            border-radius: 15px;
+            width: 100%;
+            font-size: 1.1rem;
+            resize: none;
+            border: 2px solid $EditBlogborder;
+        }
+        .Support_btn{
+            padding: 0.7rem 3rem;
+            background-color: $blue;
+            color: $white;
+            border-radius: 15px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@import '../mixin-var.scss';
+
+.editaccessorie_main{
+    @include displaygap(1.5rem);
+    flex-direction: column;
+    height: 75%;
+
+    .edit_text{
+        @include display;
+        flex-direction: column;
+        text-align: center;
+        color: $accessoriesheading;
+        h1{
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        p{
+            width: 75%;
+            
+        }
+    }
+}

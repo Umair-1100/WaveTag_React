@@ -1,0 +1,304 @@
+@import "../mixin-var.scss";
+.content_main_btns {
+  width: 100%;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+}
+.btns_add_social_content {
+  width: fit-content;
+  background-color: $bgcolor;
+  padding: 0.5rem 0;
+  overflow: hidden;
+  color: $textverification;
+  border-radius: 30px;
+  .ContentMain_btn_navlink_active {
+    background-color: $blue;
+    border-radius: 3rem;
+    color: white;
+    padding: 0.6rem 2.3rem;
+  }
+  .ContentMain_btn_navlink {
+    padding: 0.6rem 2rem;
+    border-radius: 30px;
+  }
+}
+.main_of_add_btn {
+  @include display;
+  justify-content: right;
+  padding: 0 2rem;
+  .add_btn_social {
+    @include displaygap(0.5rem);
+    padding: 0.5rem 4rem;
+    border: 1px solid $blue;
+    border-radius: 30px;
+    color: $blue;
+  }
+}
+.parent_of_social_add {
+  padding: 1rem;
+  margin-top: 1rem;
+}
+.vidgits_of_social {
+  width: 100%;
+  padding: 1rem;
+  background-color: $bgcolor;
+  border-radius: 5px;
+  @include display;
+  margin: 1rem 0;
+  justify-content: space-between;
+}
+.mix_of_dots_icon_text {
+  @include displaygap(1rem);
+}
+.mix_of_toggle_delete {
+  @include displaygap(1rem);
+}
+.content_main_page {
+  padding: 0 0 3rem 0;
+}
+.main_of_Add_content_sec{
+  padding: 0 0 6rem 0;
+}
+.showing_small_div {
+  width: 100%;
+  height: 100%;
+  background-color: #0000005d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  z-index: 99;
+  @include display;
+  transition: all 0.3s ease-in;
+}
+.showing_small_inside {
+  width: 70%;
+  height: 90%;
+  border-radius: 20px;
+  background-color: $white;
+  .scan_to_get_moblie {
+    @include display;
+    justify-content: space-between;
+    padding: 4rem 0 2rem 0;
+    position: relative;
+    margin: 0 2rem;
+  }
+  .text_mobile_for_app {
+    text-align: left;
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    p {
+      font-size: 1rem;
+      color: $notification;
+    }
+  }
+  .pic_of_qr_code {
+    @include display;
+    border: 2px solid $contentmodal;
+    background-color: $contentmodal;
+    border-radius: 30px;
+    padding: 0 0.5rem;
+    input {
+      background: none;
+      border: none;
+      outline: none;
+      padding: 0.5rem;
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+  .close_icon_cross {
+    position: absolute;
+    top: 1.5rem;
+    right: 0rem;
+  }
+  .copy_card_link {
+    padding: 2rem 0 3rem 0;
+    margin: 0 4rem;
+    border-bottom: 1px solid $gardiant;
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+    span {
+      padding: 0.8rem 25rem 0.8rem 1.5rem;
+      background-color: $spancopy;
+      margin-right: 2rem;
+      border-radius: 5px;
+      color: $linkspancolor;
+    }
+  }
+  .copy_icon_parent {
+    display: flex;
+  }
+  .copy_clip_path_btn {
+    color: $blue;
+    @include displaygap(0.5rem);
+  }
+  .share_card_inside_small {
+    padding: 2rem 0 2rem 0;
+    margin: 0 4rem;
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+  .div_of_social_links_parent {
+    margin-top: 1rem;
+    @include displaygap(1rem);
+    flex-wrap: wrap;
+  }
+  .child_of_social_links_parent {
+    width: 49%;
+    padding: 0.5rem 1.3rem;
+    background-color: $sociallinkqrcode;
+    border-radius: 5px;
+    @include display;
+    justify-content: space-between;
+    h1 {
+      @include display;
+      color: $black;
+      font-weight: 400;
+      font-size: 1rem;
+    }
+  }
+}
+.card_content_social_tag_add{
+  padding: 0 0 0 2rem;
+  @include  displaygap(1rem);
+  justify-content: start;
+  flex-wrap: wrap;
+  
+  .card_social_main{
+    width: 23%;
+    @include display;
+    justify-content: space-between;
+    background-color: $sociallinkqrcode;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+
+    .card_social_icon_text{
+      @include displaygap(0.5rem);
+    }
+  }
+}
+.heading_title_input,.title_url_inputs{
+  border: 1px solid $blue;
+  @include display;
+  margin: 1rem 2rem 2rem 2rem;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+}
+.dot_input_pen{
+  @include displaygap(1rem);
+  width: 100%;
+  justify-content: start;
+  input{
+    width: 95%;
+    outline: none;
+    border: none;
+    color: $datecolor;
+    &:focus{
+      box-shadow: none;
+    }
+    &::placeholder{
+    color: $datecolor;
+    }
+  }
+}
+.delete_icone_content{
+  @include displaygap(1rem);
+}
+.dots_title_url{
+  @include displaygap(1rem);
+  width: 100%;
+}
+.input_title_url{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: start;
+  input{
+    width: 95%;
+    outline: none;
+    border: none;
+    color: $datecolor;
+    &:focus{
+      box-shadow: none;
+    }
+    &::placeholder{
+    color: $datecolor;
+    }
+  }
+}
+.sec_delete_icon{
+  @include displaygap(1rem);
+}
+.snapchat_vidgits_main{
+  padding:1rem;
+  @include display;
+  justify-content: space-between;
+}
+.dots_edit_text{
+  @include display;
+  justify-content: start;
+}
+.edit_text_div{
+  @include displaygap(0.8rem);
+  flex-direction: column;
+  align-items: start;
+  h1{
+    font-weight: 500;
+  }
+  p{
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+}
+.toggle_delete_icon{
+  @include displaygap(1rem);
+  flex-direction: column;
+}
+.support_banner{
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  h1{
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 1rem
+  }
+}
+.main_of_support_banner{
+  @include display;
+  justify-content: space-between;
+  padding: 0  0 0 1rem;
+  
+}
+.show_support_banner{
+  h1{
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+  p{
+    font-size: 0.9rem;
+  }
+}
+.drop_down_div_cause{
+  margin: 0 2rem;
+  h1{
+    margin-bottom: 1rem;
+  }
+}
+// .myArrowClassName{
+// }
+.myControlClassName{
+  background-color: aqua;
+  top: 0;
+}

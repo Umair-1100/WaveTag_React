@@ -1,0 +1,485 @@
+@import "../mixin-var.scss";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: $body;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  @include display;
+  background-color: $bgcolor;
+}
+.inside_section {
+  overflow: hidden;
+  width: 60%;
+  min-height: 75%;
+  display: flex;
+  background: linear-gradient(90deg, $gardiant, $formbg);
+  filter: blur(20%);
+  border-radius: 20px;
+}
+.firstsignin {
+  width: 60%;
+  background-color: $blue;
+  @include display;
+  flex-direction: column;
+  position: relative;
+}
+.group_img {
+  width: 50%;
+  margin-bottom: 0.5rem;
+}
+.dots_img {
+  width: 8%;
+}
+.wel_text {
+  color: $white;
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+.para_signin {
+  color: $white;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.circle_wavelogo {
+  position: absolute;
+  top: 5rem;
+  left: -1.5rem;
+  width: 7rem;
+  height: 7rem;
+  padding: 1.5rem;
+  border-radius: 50%;
+  background-color: $wavecolor;
+
+  img {
+    margin-top: 0.3rem;
+  }
+}
+.phone-img {
+  position: absolute;
+  top: 75%;
+  left: 43%;
+  width: 5rem;
+}
+.form-main {
+  width: 40%;
+  padding: 2rem;
+}
+form {
+  @include display;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.form-logo {
+  @include display;
+  flex-direction: column;
+
+  img {
+    width: 15%;
+  }
+  h1 {
+    color: $blue;
+  }
+}
+.email-input {
+  @include display;
+  justify-content: start;
+  position: relative;
+  span {
+    position: absolute;
+    left: 5px;
+  }
+  input {
+    outline: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 2rem;
+    color: $textform;
+    font-size: 1.03rem;
+    width: 100%;
+  }
+  pre {
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+  }
+}
+.forget-pass {
+  width: 100%;
+  text-align: right;
+
+  p {
+    color: $blue;
+    font-size: 0.8rem;
+    cursor: pointer;
+    font-weight: 300;
+    transition: all 0.2s linear;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.login_btn {
+  background-color: $blue;
+  color: $white;
+  text-align: center;
+  padding: 0.5rem 8rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in;
+  border: 1px solid $blue;
+  &:hover {
+    background-color: transparent;
+    color: $blue;
+  }
+}
+.or_lines {
+  text-align: center;
+  h3 {
+    font-size: 1.1rem;
+    position: relative;
+    color: $textform;
+    &::before {
+      @include After-before;
+      left: 1.5rem;
+    }
+    &::after {
+      @include After-before;
+      right: 1.5rem;
+    }
+  }
+}
+.social_btn_main {
+  padding: 0.2rem 0;
+  width: 100%;
+  @include displaygap(0.5rem);
+  .social_btn {
+    border-radius: 0.5rem;
+    padding: 0.5rem 2.5rem;
+    @include displaygap(0.5rem);
+    color: $sociallinks;
+    border: 1px solid $blue;
+    img {
+      width: 1.5rem;
+    }
+  }
+}
+.register_btn {
+  width: 100%;
+  border: 1px solid $blue;
+  padding: 0.5rem 7.1rem;
+  color: $sociallinks;
+  border-radius: 0.5rem;
+  transition: all 0.3s linear;
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
+}
+.signin_btn{
+  border: 1px solid $blue;
+  padding: 0.5rem 8.3rem;
+  color: $sociallinks;
+  border-radius: 0.5rem;
+  transition: all 0.3s linear;
+  &:hover {
+    background-color: $blue;
+    color: $white;
+  }
+}
+
+@media only screen and (max-width: 1440px) {
+  .inside_section {
+    width: 80%;
+  }
+  .email-input {
+    width: 100%;
+  }
+  .social_btn {
+    width: 100%;
+  }
+  .login_btn{
+    padding: 0.5rem 10.35rem;
+  }
+  .signin_btn{
+    padding: 0.5rem 10.7rem;
+  }
+}
+
+
+@media only screen and (max-width: 1330px) {
+    .main{
+      padding: 1rem 0;
+      height: 120vh;
+    }
+  .inside_section {
+    width: 80%;
+    height: 100%;
+  }
+  .email-input {
+    width: 100%;
+  }
+  .social_btn {
+    width: 100%;
+  }
+  .login_btn{
+    padding: 0.5rem 9rem;
+  }
+  .signin_btn{
+    padding: 0.5rem 9.5rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .inside_section {
+    width: 98%;
+  }
+  .email-input {
+    width: 100%;
+  }
+  .social_btn {
+    width: 100%;
+  }
+  .login_btn{
+    padding: 0.5rem 8.5rem;
+  }
+  .signin_btn{
+    padding: 0.5rem 8.8rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .inside_section {
+    width: 90%;
+    flex-direction: column;
+  }
+  .firstsignin {
+    width: 100%;
+    padding: 3rem 0;
+  }
+  .main {
+    height: 100%;
+    padding: 0 0 2rem 0;
+  }
+  .form-main {
+    width: 100%;
+    @include display;
+    z-index: 9;
+    flex-direction: column;
+  }
+  .phone-img {
+    left: 80%;
+    z-index: 1;
+  }
+  .email-input {
+    width: 100%;
+  }
+
+  .social_btn_main {
+    width: 52%;
+  }
+  .register_btn {
+    width: 52%;
+  }
+  .signin_btn{
+    padding: 0.5rem 8.5rem;
+  }
+}
+@media only screen and (max-width: 765px) {
+  .phone-img{
+    display: none;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .inside_section {
+    width: 98%;
+    flex-direction: column;
+  }
+  .wel_text {
+    font-size: 1.8rem;
+  }
+  .para_signin {
+    font-size: 0.8rem;
+  }
+  .dots_img {
+    width: 12%;
+  }
+  .group_img {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+  .circle_wavelogo {
+    width: 5rem;
+    height: 5rem;
+    left: -1rem;
+    top: 3rem;
+    padding: 0.8rem;
+    img {
+      width: 100%;
+    }
+  }
+  .firstsignin {
+    width: 100%;
+    padding: 3rem 0;
+  }
+  .main {
+    height: 100%;
+    padding: 2rem 0 2rem 0;
+  }
+
+  .form-main {
+    width: 100%;
+    @include display;
+    z-index: 9;
+    flex-direction: column;
+  }
+  .phone-img {
+    display: none;
+  }
+  .email-input {
+    width: 100%;
+  }
+
+  .social_btn_main {
+    width: 95%;
+    flex-direction: column;
+  }
+  .register_btn {
+    text-align: center;
+    width: 95%;
+
+  }
+  .signin_btn {
+    text-align: center;
+    padding: 0.5rem 9.3rem;
+  }
+  .or_lines {
+    h3 {
+      &::before {
+        width: 6rem;
+      }
+      &::after {
+        width: 6rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 375px) {
+  .inside_section {
+    width: 98%;
+    flex-direction: column;
+  }
+  .wel_text {
+    font-size: 1.8rem;
+  }
+  .para_signin {
+    font-size: 0.8rem;
+  }
+  .dots_img {
+    width: 12%;
+  }
+  .group_img {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
+  .circle_wavelogo {
+    width: 5rem;
+    height: 5rem;
+    left: -1rem;
+    top: 3rem;
+    padding: 0.8rem;
+    img {
+      width: 100%;
+    }
+  }
+  .firstsignin {
+    width: 100%;
+    padding: 3rem 0;
+  }
+  .main {
+    height: 100%;
+    padding: 2rem 0 2rem 0;
+  }
+
+  .form-main {
+    width: 100%;
+    @include display;
+    z-index: 9;
+    flex-direction: column;
+  }
+  .phone-img {
+    display: none;
+  }
+  .email-input {
+    width: 100%;
+  }
+
+  .social_btn_main {
+    width: 100%;
+    flex-direction: column;
+  }
+  .register_btn {
+    width: 100%;
+    text-align: center;
+
+  }
+  .signin_btn {
+    padding: 0.5rem 7.4rem;
+    text-align: center;
+  }
+  .or_lines {
+    h3 {
+      &::before {
+        width: 6rem;
+      }
+      &::after {
+        width: 6rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 320px) {
+  
+  .main {
+    padding: 1rem 0 1rem 0;
+  }
+
+  .form-main {
+    padding: 2rem 0.8rem;
+  }
+  .phone-img {
+    display: none;
+  }
+  .email-input {
+    width: 100%;
+  }
+
+  .social_btn_main {
+    width: 100%;
+    flex-direction: column;
+  }
+  .register_btn {
+    text-align: center;
+    padding: 0.5rem 0;
+
+  }
+  .signin_btn {
+    padding: 0.5rem 7.4rem;
+    text-align: center;
+  }
+  .or_lines {
+    h3 {
+      &::before {
+        width: 6rem;
+      }
+      &::after {
+        width: 6rem;
+      }
+    }
+  }
+}

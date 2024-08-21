@@ -1,0 +1,16 @@
+@import '../mixin-var.scss';
+
+
+
+.themes_cards_main{
+    width: 100%;
+    height: 100%;
+    @include display;
+    justify-content: start;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    img{
+        margin: 1rem 1.5rem;
+        width: 15%;
+    } 
+}

@@ -1,0 +1,303 @@
+@import "../mixin-var.scss";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.activeYes {
+  color: $blue;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0.5rem;
+    width: 100%;
+    height: 0.3rem;
+    border-radius: 20px 20px 0 0;
+    background-color: $blue;
+  }
+  svg{
+    .icon_active_stroke{
+      stroke: none;
+    }
+    fill: $blue;
+  }
+}
+.activeNo {
+  color: $datecolor;
+
+  svg {
+    fill:$datecolor;
+  }
+}
+
+.home-main {
+  width: 100%;
+  height: 100vh;
+  background-color: $bgcolor;
+}
+.logo_profile {
+  @include display;
+  justify-content: space-between;
+  padding: 0.8rem 2rem;
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+.notification_hidden {
+  position: absolute;
+  top: 3.5rem;
+  right: 7rem;
+  width: 22rem;
+  border-radius: 10px;
+  background-color: $white;
+  overflow: hidden;
+  border: 1px solid $inputborder;
+  z-index: 5;
+  .notification_text {
+    border-bottom: 1px solid $notificationhome;
+    @include display;
+    justify-content: space-between;
+    padding: 0.4rem 1rem;
+    p {
+      font-size: 0.8rem;
+      color: $notification;
+    }
+  }
+  .inner_notificaiton,
+  .inner_notificaiton_2 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1.5rem;
+    border-bottom: 1px solid $notificationhometext;
+    span {
+      border-left: 1px solid $notificationhometext;
+      padding-left: 1.5rem;
+    }
+    h2 {
+      font-size: 0.8rem;
+    }
+    h3 {
+      font-size: 0.6rem;
+    }
+    p {
+      font-size: 0.7rem;
+      color: red;
+    }
+  }
+  .inner_notificaiton_2 {
+    border: none;
+  }
+}
+.profile_setting {
+  @include displaygap(1.5rem);
+}
+.profile_picture {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.main_of_navbar_items {
+  padding: 0 2rem;
+}
+.navbar_of_home {
+  padding: 0.5rem 2rem;
+  border-radius: 20px;
+  background-color: $white;
+  @include display;
+  justify-content: space-between;
+  .links_of_navbar {
+    @include displaygap(0.5rem);
+    padding: 0.5rem 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  .download_span {
+    border-left: 1px solid $blue;
+    @include displaygap(0.5rem);
+    padding-left: 0.7rem;
+    color: $blue;
+    cursor: pointer;
+  }
+}
+.text_my_card {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.5rem 2rem;
+  .text_icon_plus {
+    @include displaygap(1rem);
+    justify-content: left;
+    font-size: 1.4rem;
+    color: $mycard;
+  }
+}
+.cards_mian_of_cardsHome {
+  @include display;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+.card_of_inside_cardsHome {
+  width: 32%;
+  height: 17rem;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+  text-align: center;
+  h1 {
+    margin-top: 2.3rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .edit_btn_of_card_1 {
+    border: 2px solid $black;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    padding: 0.3rem 2rem;
+    color: $black;
+  }
+  .edit_btn_of_card {
+    background-color: $blue;
+    padding: 0.3rem 2rem;
+    border: 2px solid $blue;
+    color: $white;
+    border-radius: 30px;
+    font-size: 1.1rem;
+  }
+}
+.edit_btn_cards_main {
+  @include displaygap(0.5rem);
+  margin-top: 1rem;
+}
+.card_of_inside_cardsHome_2,
+.card_of_inside_cardsHome_3 {
+  @include display;
+  flex-direction: column;
+  background-color: white;
+  height: 17rem;
+  border-radius: 20px;
+  width: 32%;
+  h1 {
+    margin-top: 1rem;
+  }
+}
+.img_1_card {
+  background-image: url("./public/cardbg.png");
+  width: 95%;
+  height: 45%;
+  background-size: 100% 100%;
+  margin: 0.5rem auto;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  position: relative;
+}
+.pic_card_profile {
+  position: absolute;
+  bottom: -2rem;
+  width: 100%;
+  @include display;
+  img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    border: 3px solid $white;
+  }
+}
+.showing_small_div {
+  width: 100%;
+  height: 100vh;
+  background-color: #0000005d;
+  position: absolute;
+  top: 0;
+  @include display;
+  transition: all 0.3s ease-in;
+}
+.showing_small_inside {
+  width: 60%;
+  height: 90%;
+  border-radius: 20px;
+  background-color: $white;
+  .scan_to_get_moblie {
+    @include display;
+    justify-content: space-between;
+    padding: 4rem 0 2rem 0;
+    position: relative;
+    border-bottom: 1px solid $gardiant;
+    margin: 0 4rem;
+  }
+  .text_mobile_for_app {
+    text-align: left;
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+    p {
+      font-size: 1rem;
+      color: $notification;
+    }
+  }
+  .pic_of_qr_code {
+    @include display;
+    user-select: none;
+  }
+  .close_icon_cross {
+    position: absolute;
+    top: 1.5rem;
+    right: -2.5rem;
+  }
+  .copy_card_link {
+    padding: 2rem 0 3rem 0;
+    margin: 0 4rem;
+    border-bottom: 1px solid $gardiant;
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+    span {
+      padding: 0.8rem 25rem 0.8rem 1.5rem;
+      background-color: $spancopy;
+      margin-right: 2rem;
+      border-radius: 5px;
+      color: $linkspancolor;
+    }
+  }
+  .copy_icon_parent {
+    display: flex;
+  }
+  .copy_clip_path_btn {
+    color: $blue;
+    @include displaygap(0.5rem);
+  }
+  .share_card_inside_small {
+    padding: 2rem 0 2rem 0;
+    margin: 0 4rem;
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+  .div_of_social_links_parent {
+    margin-top: 1rem;
+    @include displaygap(1rem);
+    flex-wrap: wrap;
+  }
+  .child_of_social_links_parent {
+    width: 49%;
+    padding: 0.5rem 1.3rem;
+    background-color: $sociallinkqrcode;
+    border-radius: 5px;
+    @include display;
+    justify-content: space-between;
+    h1 {
+      @include display;
+      color: $black;
+      font-weight: 400;
+      font-size: 1rem;
+    }
+  }
+}

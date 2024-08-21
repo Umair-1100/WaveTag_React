@@ -1,0 +1,56 @@
+$blue:#0000ff;
+$white:#ffffff;
+$black:#000000;
+$lightpurple:#a3a3f7;
+$body:#111111;
+$wavecolor:#2D60FF;
+$bgcolor:#F5F7FA;
+$gardiant:#c3c3c3;
+$formbg:#ffffff48;
+$textform:#828282;
+$border:#E6E9FA;
+$sociallinks:#3949AB;
+$textverification:#454545;
+$inputborder:#A1A1A1;
+$eightone:#818181;
+$whiteforback:#cecdcd;
+$mycard:#343c6a;
+$notification:#4d4d4d;
+$spancopy:#F0F0F0;
+$linkspancolor:#343434;
+$sociallinkqrcode:#EDEDED;
+$accessoriesheading:#292929;
+$accessoriesText:#232323;
+$datecolor:#718EBF;
+$toggleBtnbg:#16dbcc;
+$EditBlogborder:#dfeaf2;
+$secqrocodeborder:#3389f4;
+$checkboxborder:#dcdcdc;
+$bdageborder:#cbcbcb;
+$cardsbgupper:#396bff;
+$cardbg:#1814f3;
+$thirdcardbg:#fe5c73;
+$notificationhome: #bababa;
+$notificationhometext: #dadada;
+$contentmodal:#ebebeb;
+$contentsocialcard:#949494;
+
+
+@mixin display{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin displaygap($prop){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $prop;
+}
+@mixin After-before{
+    content: "";
+    border: 1px solid $border;
+    width: 35%;
+    position: absolute;
+    top: 0.8rem;
+}

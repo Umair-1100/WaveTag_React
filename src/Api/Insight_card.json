@@ -1,0 +1,26 @@
+[
+    {
+        "img_url":"./public/insight.png",
+        "title":"Leads Generated",
+        "rating":12,
+        "id":1
+    },
+    {
+        "img_url":"./public/click.png",
+        "title":"Link Taps",
+        "rating":56,
+        "id":2
+    },
+    {
+        "img_url":"./public/Eye.png",
+        "title":"Card Views",
+        "rating":31,
+        "id":3
+    },
+    {
+        "img_url":"./public/download.png",
+        "title":"Contacts Downloaded",
+        "rating":79,
+        "id":4
+    }
+]

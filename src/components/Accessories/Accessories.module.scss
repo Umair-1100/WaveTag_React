@@ -1,0 +1,41 @@
+@import "../mixin-var.scss";
+
+.accessories_main {
+  width: 100%;
+  height: 100vh;
+  background-color: $bgcolor;
+}
+.accessoriesComp_main {
+  width: 100%;
+  height: 60vh;
+  background-color: $bgcolor;
+  @include display;
+
+  .access_inside_main {
+    width: 96%;
+    border-radius: 20px;
+    background-color: $white;
+    height: 100%;
+    @include displaygap(5rem);
+
+    .inside_details_1 {
+      @include display;
+      flex-direction: column;
+
+      h1 {
+        font-size: 1.3rem;
+        color: $accessoriesheading;
+      }
+      p {
+        color: $accessoriesText;
+        margin: 0.6rem 0;
+        text-align: center;
+        font-size: 0.8rem;
+        width: 60%;
+      }
+    }
+    .inside_details_2 {
+      margin: 1.5rem 0 0 0;
+    }
+  }
+}

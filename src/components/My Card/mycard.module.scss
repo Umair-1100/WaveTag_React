@@ -1,0 +1,193 @@
+@import "../mixin-var.scss";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.activeYes {
+  color: $blue;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -0.7rem;
+    left: 0rem;
+    width: 100%;
+    height: 0.2rem;
+    border-radius: 20px 20px 0 0;
+    background-color: $blue;
+  }
+}
+.activeNo {
+  color: $datecolor;
+  position: static;
+}
+.MyCard_section {
+  width: 100%;
+  background-color: $bgcolor;
+  padding: 0 0 2rem 0;
+}
+.main_of_edit_and_preview {
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  gap: 3rem;
+}
+.First_child_of_edit_and_preview {
+  width: 70%;
+  border-radius: 20px;
+  background-color: $white;
+  overflow: hidden;
+}
+.edit__navbar_of_pages {
+  width: 100%;
+  margin-bottom: 0.5rem;
+  ul {
+    @include displaygap(1rem);
+    justify-content: space-between;
+    padding: 0.7rem 2rem;
+    border-bottom: 1px solid $bgcolor;
+  }
+}
+.about_inner_main {
+  @include displaygap(1rem);
+  padding-bottom: 1rem;
+}
+.drag_and_drop {
+  @include displaygap(1rem);
+  flex-direction: column;
+}
+.drag_and_drop_child_1 {
+  @include displaygap(3rem);
+  justify-content: space-between;
+  flex-direction: column;
+  h1 {
+    margin-bottom: 0.5rem;
+  }
+}
+.img_drag_drop_result {
+  position: relative;
+  @include display;
+}
+.child_1_inside {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  margin: 0 1rem;
+  overflow: hidden;
+  @include display;
+  flex-direction: column;
+  background-color: $bgcolor;
+  h2 {
+    margin: 1rem 0 0.3rem 0;
+    font-size: 0.4rem;
+    font-weight: 600;
+  }
+  p {
+    font-size: 0.3rem;
+    color: $datecolor;
+  }
+}
+.shape_different {
+  border-radius: 5px;
+  padding: 0;
+  height: 6rem;
+}
+.form_of_about_inner {
+  width: 100%;
+  padding: 0 1rem;
+}
+.main_of_card_title {
+  @include display;
+  justify-content: right;
+}
+.Card_title {
+  @include display;
+  position: relative;
+  margin: 0.5rem 0 0 0;
+  .inp_brush_combine {
+    border: 2px solid $EditBlogborder;
+    @include display;
+    padding: 0 1rem;
+    border-radius: 20px;
+  }
+  p {
+    color: $blue;
+    margin-right: 0.5rem;
+    font-size: 1.2rem;
+  }
+  input {
+    border: none;
+    padding: 0.6rem 1rem 0.6rem 0;
+    outline: none;
+
+    &:focus {
+      box-shadow: none !important;
+      outline: none !important;
+      border: none !important;
+    }
+  }
+}
+.form_of_about_page {
+  padding: 1rem 0;
+  width: 100%;
+  @include displaygap(0);
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.label_form {
+  width: 49%;
+  margin: 0.5rem 0;
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.2rem;
+  }
+  input {
+    color: $black;
+    border: 2px solid $EditBlogborder;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    outline: none;
+    font-size: 1.1rem;
+    &::placeholder {
+      color: $datecolor;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+  }
+}
+
+.theme_nav_main {
+  margin: 0;
+  ul {
+    @include displaygap(5rem);
+    justify-content: start;
+    padding: 0.5rem 2rem;
+  }
+}
+
+.active {
+  color: $blue;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0rem;
+    width: 100%;
+    height: 0.2rem;
+    border-radius: 20px 20px 0 0;
+    background-color: $blue;
+  }
+}
+.noactive {
+  color: $datecolor;
+}

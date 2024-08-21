@@ -1,0 +1,29 @@
+@import '../mixin-var.scss';
+
+.integration_main{
+    background-color: $bgcolor;
+}
+
+.integrationDescription_main{
+    padding: 2rem 3rem;
+    @include display;
+    justify-content: space-between;
+    align-items: start;
+    
+    .integra_text{
+    @include display;
+    flex-direction: column;
+    align-items: start;
+    h1{
+           font-size: 3.5rem;
+       }
+       p{
+           // width: 28%;
+           margin: 0.7rem 0 2rem 0;
+       }
+    } 
+   .integra_img{
+       
+       margin-top: 1rem;
+   }
+}
