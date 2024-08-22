@@ -2,6 +2,7 @@ import { useState } from "react";
 import { SocialBtn } from "../Sign in/SocialBtn";
 import { Email, Eye, Username, Lock } from "../../icon/Add";
 import { Link, useNavigate } from "react-router-dom";
+import styles from "../Sign in/Sign.module.scss"
 
 export const SecSignUp = () => {
   const [email, setEmail] = useState("");
@@ -31,14 +32,14 @@ export const SecSignUp = () => {
   };
 
   return (
-    <div className="form-main">
-      <div className="form-logo">
+    <div className={styles["form-main"]}>
+      <div className={styles["form-logo"]}>
         <img src="/Signlogo.png" alt="Logo" />
         <h1>Sign In</h1>
       </div>
 
       <form onSubmit={handleFormSubmit}>
-        <div className="email-input">
+        <div className={styles["email-input"]}>
           <span>
             <Username />
           </span>
@@ -51,7 +52,7 @@ export const SecSignUp = () => {
           />
         </div>
         
-        <div className="email-input">
+        <div className={styles["email-input"]}>
           <span>
             <Email />
           </span>
@@ -64,7 +65,7 @@ export const SecSignUp = () => {
           />
         </div>
 
-        <div className="email-input">
+        <div className={styles["email-input"]}>
           <span>
             <Lock />
           </span>
@@ -76,22 +77,22 @@ export const SecSignUp = () => {
             placeholder="Password"
           />
           <pre
-            className="eye_form-icon"
+            className={styles["eye_form-icon"]}
             onClick={() => setHide(hide === "password" ? "text" : "password")}
           >
             <Eye />
           </pre>
         </div>
 
-        <div className="forget-pass">
+        <div className={styles["forget-pass"]}>
           <p>Forgot password?</p>
         </div>
-        <button className="login_btn" type="submit">
+        <button className={styles.login_btn} type="submit">
           Sign Up
         </button>
       </form>
 
-      <div className="or_lines">
+      <div className={styles.or_lines}>
         <h3>Or</h3>
       </div>
 
@@ -100,7 +101,7 @@ export const SecSignUp = () => {
       <h3 className="text-center text-[0.9rem] my-2 text-[#828282]">
         Have an account yet?
       </h3>
-      <Link to="/" className="signin_btn">Sign In</Link>
+      <Link to="/" className={styles.signin_btn}>Sign In</Link>
     </div>
   );
 };

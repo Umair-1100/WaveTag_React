@@ -49,8 +49,9 @@ $contentsocialcard:#949494;
 }
 @mixin After-before{
     content: "";
-    border: 1px solid $border;
+    border: 1px solid $whiteforback;
     width: 35%;
     position: absolute;
     top: 0.8rem;
+    border-radius: 5px;
 }

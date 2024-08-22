@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Email, Eye, Lock } from "../../icon/Add";
 import { useNavigate } from "react-router";
+import styles from "./Sign.module.scss"
+
 
 export const FormSign = () => {
   const [email, setEmail] = useState("");
@@ -29,7 +31,7 @@ export const FormSign = () => {
 
   return (
     <form onSubmit={handleFormSubmit}>
-      <div className="email-input">
+      <div className={styles["email-input"]}>
         <span>
           <Email />
         </span>
@@ -41,7 +43,7 @@ export const FormSign = () => {
           placeholder="Email"
         />
       </div>
-      <div className="email-input">
+      <div className={styles["email-input"]}>
         <span>
           <Lock />
         </span>
@@ -53,19 +55,21 @@ export const FormSign = () => {
           placeholder="Password"
         />
         <pre
-          className="eye_form-icon"
+          className={styles["eye_form-icon"]}
           onClick={() => setHide(hide === "password" ? "text" : "password")}
         >
           <Eye />
         </pre>
       </div>
 
-      <div className="forget-pass">
+      <div className={styles["forget-pass"]}>
         <p>Forgot password?</p>
       </div>
-      <button className="login_btn" type="submit" onClick={handleFormSubmit}>
+      <div className={styles.login_main_btn}>
+      <button className={styles.login_btn} type="submit" onClick={handleFormSubmit}>
         Log in
       </button>
+      </div>
     </form>
   );
 };
