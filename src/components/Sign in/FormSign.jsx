@@ -30,7 +30,7 @@ export const FormSign = () => {
   };
 
   return (
-    <form onSubmit={handleFormSubmit}>
+    <form onSubmit={handleFormSubmit} >
       <div className={styles["email-input"]}>
         <span>
           <Email />
